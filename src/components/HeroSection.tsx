@@ -73,9 +73,9 @@ export function HeroSection() {
           }}
           className="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 mb-10 leading-relaxed">
 
-          Protect yourself and your audience from misinformation. Aletheia AI
-          uses state-of-the-art machine learning to verify social media videos
-          and perform fake image detection in seconds.
+          Protect yourself and your audience from misinformation using Aletheia AI, an advanced deepfake detection tool.
+          Our AI-powered deepfake detection system analyses
+          social media videos and images to identify manipulated media instantly.
         </motion.p>
 
         <motion.div

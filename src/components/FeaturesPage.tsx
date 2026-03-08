@@ -61,8 +61,14 @@ export function FeaturesPage() {
             Powerful Features for Media Verification
           </h2>
           <p className="text-lg text-slate-400">
-            Everything you need to combat misinformation. Our comprehensive
-            deepfake detection tool is built for accuracy and transparency.
+            Powerful Features for Media Verification
+
+Everything you need to combat misinformation online. 
+Aletheia AI is an advanced deepfake detection tool designed to verify 
+digital media and detect fake videos or manipulated images shared on social media. 
+Our AI-powered media verification system provides accurate 
+detection results and transparent analysis to help users identify 
+deepfake content quickly and confidently.
           </p>
         </div>
 
