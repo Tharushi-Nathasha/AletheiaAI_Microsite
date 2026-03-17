@@ -9,25 +9,56 @@ import { FeaturesPage } from './components/FeaturesPage';
 import { AboutPage } from './components/AboutPage';
 import { ContactPage } from './components/ContactPage';
 import { Footer } from './components/Footer';
+
+
+// Google Analytics Tracker
+function AnalyticsTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if ((window as any).gtag) {
+      (window as any).gtag('config', 'G-77Z2RHF74X', {
+        page_path: location.pathname + location.hash, // important for HashRouter
+      });
+    }
+  }, [location]);
+
+  return null;
+}
+
+
+// Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
   return null;
 }
+
+
+// Home Page
 function HomePage() {
   return (
     <>
       <HeroSection />
       <FeaturesHighlight />
       <WhyItMatters />
-    </>);
-
+    </>
+  );
 }
+
+
+// Main App
 export function App() {
   return (
     <HashRouter>
+
+      {/* ✅ Analytics tracker MUST be inside router */}
+      <AnalyticsTracker />
+
       <div className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-cyan-500/30 selection:text-cyan-200">
         <Navbar />
         <ScrollToTop />
@@ -44,6 +75,6 @@ export function App() {
 
         <Footer />
       </div>
-    </HashRouter>);
-
+    </HashRouter>
+  );
 }
